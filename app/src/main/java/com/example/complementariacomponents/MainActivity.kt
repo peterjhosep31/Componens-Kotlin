@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         btnComprar.setOnClickListener {
             var intent = Intent(this, RegitreUser::class.java)
             startActivity(intent)
+
         }
 
 

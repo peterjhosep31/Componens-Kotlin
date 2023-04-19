@@ -9,17 +9,17 @@
     tools:context=".Mensajes">
 
     <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="DON APARATO"
-    android:textSize="40sp"
-    android:layout_gravity="center"
-    android:layout_marginTop="40dp"
-    android:id="@+id/textView"
-    android:textColor="#03268A"
-    android:fontFamily="sans-serif-medium"
-    android:textStyle="bold"
-    />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DON APARATO"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:id="@+id/textView1"
+        android:textColor="#03268A"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -77,6 +77,18 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:id="@+id/textView6"
+        android:textColor="#000"
+        android:fontFamily="sans-serif-medium"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mensajes"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView7"
         android:textColor="#000"
         android:fontFamily="sans-serif-medium"
         />
