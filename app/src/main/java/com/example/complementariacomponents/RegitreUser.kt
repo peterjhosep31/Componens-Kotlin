@@ -1,5 +1,6 @@
 package com.example.complementariacomponents
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -21,8 +22,10 @@ class RegitreUser : AppCompatActivity() {
     var etUserD: RadioButton? = null
     var btnComprar: Button? = null
     var btnLimpiar: Button? = null
+    var btnVolver: Button? = null
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_regitre_user)
@@ -36,6 +39,11 @@ class RegitreUser : AppCompatActivity() {
         etUserD = findViewById(R.id.ninguno)
         btnComprar = findViewById(R.id.buttonSigiente)
         btnLimpiar = findViewById(R.id.limpiarRegistro)
+        btnVolver = findViewById(R.id.volverAtras)
+
+        btnVolver?.setOnClickListener {
+            finish()
+        }
 
         btnComprar?.setOnClickListener {
             capturarDatos()

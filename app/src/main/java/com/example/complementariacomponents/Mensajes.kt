@@ -43,8 +43,7 @@ class Mensajes : AppCompatActivity() {
 
         var preferencesUser: SharedPreferences =
             getSharedPreferences("credencialesUsuario", MODE_PRIVATE)
-        var preferencesProduct: SharedPreferences =
-            getSharedPreferences("credencialesProduct", MODE_PRIVATE)
+        var blundle: Bundle? = intent.extras
 
         textView1 = findViewById(R.id.textView2)
         textView2 = findViewById(R.id.textView3)
@@ -69,17 +68,9 @@ class Mensajes : AppCompatActivity() {
         telefonoUser = telefonoPreference
         usuarioUser = usuarioPreference
 
-
-        var nombreProductPreference =
-            preferencesProduct.getString("nombreProduct", "No existe la informacion")
-        var valorUniProductPreference =
-            preferencesProduct.getString("valorUniProduct", "No existe la informacion")
-        var cantidadProductPreference =
-            preferencesProduct.getString("cantidadProduct", "No existe la informacion")
-
-        nombreProduct = nombreProductPreference
-        valorUniProduct = valorUniProductPreference
-        cantidadProduct = cantidadProductPreference
+        nombreProduct = blundle?.getString("nombreProduct")
+        valorUniProduct = blundle?.getString("valorUniProduct")
+        cantidadProduct = blundle?.getString("cantidadProduct")
 
 
         if (usuarioUser == "Usuario A") {

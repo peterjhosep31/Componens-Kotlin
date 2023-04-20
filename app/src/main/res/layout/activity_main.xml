@@ -7,65 +7,77 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DON APARATO"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:id="@+id/textView"
-        android:textColor="#03268A"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        />
+        android:layout_weight="1">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Realizar compra"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="40dp"
-        android:layout_gravity="right"
-        android:id="@+id/comprar"
-        android:textColor="#000"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        android:padding="10dp"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DON APARATO"
+                android:textSize="40sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:id="@+id/textView"
+                android:textColor="#03268A"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mostrar datos"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
-        android:layout_gravity="left"
-        android:id="@+id/mostrarData"
-        android:textColor="#000"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        android:padding="10dp"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ayuda"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="40dp"
-        android:layout_gravity="right"
-        android:id="@+id/ayuda"
-        android:textColor="#000"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        android:padding="10dp"
-        />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Realizar compra"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="right"
+                android:id="@+id/comprar"
+                android:textColor="#000"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:padding="10dp"
+                />
 
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar datos"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="left"
+                android:id="@+id/mostrarData"
+                android:textColor="#000"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:padding="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ayuda"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="right"
+                android:id="@+id/ayuda"
+                android:textColor="#000"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

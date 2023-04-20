@@ -7,16 +7,15 @@ import android.widget.Button
 
 class Ayuda : AppCompatActivity() {
 
-    var volver: Button? = null
+    var btnVolver: Button? = null
 
-        @SuppressLint("MissingInflatedId")
-        override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ayuda)
 
-            volver = findViewById(R.id.volver)
+        btnVolver = findViewById(R.id.volver)
 
-        volver?.setOnClickListener {
+        btnVolver?.setOnClickListener {
             finish()
         }
 

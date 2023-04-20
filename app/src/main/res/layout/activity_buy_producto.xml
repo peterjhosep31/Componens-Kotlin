@@ -7,110 +7,135 @@
     android:orientation="vertical"
     tools:context=".BuyProducto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DON APARATO"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textView"
-        android:textColor="#03268A"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        />
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/usuario"
-        android:gravity="right"
-        android:text="sdf"
-        android:textSize="15sp"
-        android:layout_marginRight="20dp"
-        />
+        android:layout_weight="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Producto"
-        android:textSize="30sp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textView2"
-        android:textColor="#03268A"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Datos del producto"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/textView3"
-        android:textColor="#03268A"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DON APARATO"
+                android:textSize="40sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView"
+                android:textColor="#03268A"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|center"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
-        android:ems="10"
-        android:hint="Nombre"
-        android:id="@+id/nameProduct"
-        android:inputType="text"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/usuario"
+                android:gravity="right"
+                android:text="sdf"
+                android:textSize="15sp"
+                android:layout_marginRight="20dp"
+                />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|center"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
-        android:ems="10"
-        android:hint="Valor unitario"
-        android:id="@+id/valorUnitario"
-        android:inputType="numberDecimal"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto"
+                android:textSize="30sp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView2"
+                android:textColor="#03268A"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|center"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
-        android:ems="10"
-        android:hint="Cantidad"
-        android:id="@+id/cantidadProduct"
-        android:inputType="number"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"
-        />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Datos del producto"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/textView3"
+                android:textColor="#03268A"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Limpiar" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:ems="10"
+                android:hint="Nombre"
+                android:id="@+id/nameProduct"
+                android:inputType="text"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Comprar"
-        android:textStyle="bold" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:ems="10"
+                android:hint="Valor unitario"
+                android:id="@+id/valorUnitario"
+                android:inputType="numberDecimal"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:ems="10"
+                android:hint="Cantidad"
+                android:id="@+id/cantidadProduct"
+                android:inputType="number"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Limpiar" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Comprar"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Volver"
+                android:id="@+id/volver"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

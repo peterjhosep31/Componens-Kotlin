@@ -13,6 +13,7 @@ import android.widget.Toast
 
 class BuyProducto : AppCompatActivity() {
     var btnLimpiar: Button? = null
+    var btnVolver: Button? = null
     var btnComprar: Button? = null
     var etNombre: EditText? = null
     var etValorUni: EditText? = null
@@ -28,6 +29,7 @@ class BuyProducto : AppCompatActivity() {
 
         vtNombre = findViewById(R.id.usuario)
         btnLimpiar = findViewById(R.id.button2)
+        btnVolver = findViewById(R.id.volver)
         btnComprar = findViewById(R.id.button)
         etNombre = findViewById(R.id.nameProduct)
         etValorUni = findViewById(R.id.valorUnitario)
@@ -42,10 +44,12 @@ class BuyProducto : AppCompatActivity() {
         }
 
 
-
-
         btnComprar?.setOnClickListener {
             capturarDatos()
+        }
+
+        btnVolver?.setOnClickListener {
+            finish()
         }
 
     }
@@ -61,14 +65,9 @@ class BuyProducto : AppCompatActivity() {
         }
 
         var miIntent = Intent(this, Mensajes::class.java)
-
-        var preferences: SharedPreferences = getSharedPreferences("credencialesProduct", Context.MODE_PRIVATE)
-        var editor: SharedPreferences.Editor = preferences.edit()
-        editor.putString("nombreProduct", nombre)
-        editor.putString("valorUniProduct", valorUni)
-        editor.putString("cantidadProduct", cantidad)
-
-        editor.commit()
+        miIntent.putExtra("nombreProduct", nombre)
+        miIntent.putExtra("valorUniProduct", valorUni)
+        miIntent.putExtra("cantidadProduct", cantidad)
 
 
         startActivity(miIntent)
