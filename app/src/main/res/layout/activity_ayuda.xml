@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ayuda"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/design_default_color_primary"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Qué es la aplicación?"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Es una aplicación que te permite realizar un seguimiento de tus gastos e ingresos, de forma que puedas saber en todo momento cuánto dinero tienes disponible para gastar."
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cómo funciona?"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La aplicación te permite crear una cuenta, en la que podrás añadir tus ingresos y gastos. Además, podrás crear categorías para tus gastos, de forma que puedas saber en todo momento cuánto dinero has gastado en cada una de ellas."
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pedro José Bermúdez López"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:textStyle="bold"
+            />
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/imagen" />
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ficha: 246181"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:textStyle="bold"
+            />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volver"
+                android:layout_gravity="center"
+                android:onClick="volver"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/design_default_color_primary"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

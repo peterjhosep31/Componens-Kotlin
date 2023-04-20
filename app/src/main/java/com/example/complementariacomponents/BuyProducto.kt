@@ -62,7 +62,7 @@ class BuyProducto : AppCompatActivity() {
 
         var miIntent = Intent(this, Mensajes::class.java)
 
-        var preferences: SharedPreferences = getSharedPreferences("datos", Context.MODE_PRIVATE)
+        var preferences: SharedPreferences = getSharedPreferences("credencialesProduct", Context.MODE_PRIVATE)
         var editor: SharedPreferences.Editor = preferences.edit()
         editor.putString("nombreProduct", nombre)
         editor.putString("valorUniProduct", valorUni)

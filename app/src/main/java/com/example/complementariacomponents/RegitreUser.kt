@@ -72,7 +72,7 @@ class RegitreUser : AppCompatActivity() {
             Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show()
         } else {
 
-            var preferences: SharedPreferences =getSharedPreferences("credenciales", Context.MODE_PRIVATE)
+            var preferences: SharedPreferences =getSharedPreferences("credencialesUsuario", Context.MODE_PRIVATE)
             var editor: SharedPreferences.Editor = preferences.edit()
             editor.putString("nombreUser", nombre)
             editor.putString("apellidoUser", apellido)

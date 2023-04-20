@@ -32,6 +32,8 @@ class Mensajes : AppCompatActivity() {
     var descuento: Float? = null
     var mensaje: String? = null
     var cantidadDescuento: Float? = null
+    var precioReal: Float? = null
+    var toco: Double? = null
 
 
     @SuppressLint("MissingInflatedId")
@@ -39,7 +41,10 @@ class Mensajes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mensajes)
 
-        var preferences: SharedPreferences =getSharedPreferences("credenciales", MODE_PRIVATE)
+        var preferencesUser: SharedPreferences =
+            getSharedPreferences("credencialesUsuario", MODE_PRIVATE)
+        var preferencesProduct: SharedPreferences =
+            getSharedPreferences("credencialesProduct", MODE_PRIVATE)
 
         textView1 = findViewById(R.id.textView2)
         textView2 = findViewById(R.id.textView3)
@@ -50,11 +55,13 @@ class Mensajes : AppCompatActivity() {
         btnSalir = findViewById(R.id.button)
 
 
-        var nombrePreference = preferences.getString("nombreUser", "No existe la informacion")
-        var apellidoPreference = preferences.getString("apellidoUser", "No existe la informacion")
-        var edadPreference = preferences.getString("edadUser", "No existe la informacion")
-        var telefonoPreference = preferences.getString("telefonoUser", "No existe la informacion")
-        var usuarioPreference = preferences.getString("usuarioUser", "No existe la informacion")
+        var nombrePreference = preferencesUser.getString("nombreUser", "No existe la informacion")
+        var apellidoPreference =
+            preferencesUser.getString("apellidoUser", "No existe la informacion")
+        var edadPreference = preferencesUser.getString("edadUser", "No existe la informacion")
+        var telefonoPreference =
+            preferencesUser.getString("telefonoUser", "No existe la informacion")
+        var usuarioPreference = preferencesUser.getString("usuarioUser", "No existe la informacion")
 
         nombreUser = nombrePreference
         apellidoUser = apellidoPreference
@@ -63,46 +70,46 @@ class Mensajes : AppCompatActivity() {
         usuarioUser = usuarioPreference
 
 
-        var nombreProductPreference = preferences.getString("nombreProduct", "No existe la informacion")
-        var valorUniProductPreference = preferences.getString("valorUniProduct", "No existe la informacion")
-        var cantidadProductPreference = preferences.getString("cantidadProduct", "No existe la informacion")
+        var nombreProductPreference =
+            preferencesProduct.getString("nombreProduct", "No existe la informacion")
+        var valorUniProductPreference =
+            preferencesProduct.getString("valorUniProduct", "No existe la informacion")
+        var cantidadProductPreference =
+            preferencesProduct.getString("cantidadProduct", "No existe la informacion")
 
         nombreProduct = nombreProductPreference
         valorUniProduct = valorUniProductPreference
         cantidadProduct = cantidadProductPreference
 
 
-        if(usuarioUser == "Usuario A"){
-            descuento = 0.4f
-            totalPagar = (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat()) - (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat() * descuento!!)
-            cantidadDescuento = (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat() * descuento!!)
-            mensaje =  "Tiene un descuento del 40%"
+        if (usuarioUser == "Usuario A") {
+            descuento = 0.1F
+            mensaje = "Usuario A: 40% de descuento"
 
-        }else if(usuarioUser == "Usuario B"){
-            descuento = 0.2f
-            totalPagar = (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat()) - (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat() * descuento!!)
-            cantidadDescuento = (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat() * descuento!!)
-            mensaje =  "Tiene un descuento del 20%"
+        } else if (usuarioUser == "Usuario B") {
+            descuento = 0.2F
+            mensaje = "Usuario B: 20% de descuento"
 
-        }else if(usuarioUser == "Usuario C"){
-            descuento = 0.1f
-            totalPagar = (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat()) - (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat() * descuento!!)
-            cantidadDescuento = (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat() * descuento!!)
-            mensaje =  "Tiene un descuento del 10%"
+        } else if (usuarioUser == "Usuario C") {
+            descuento = 0.3F
+            mensaje = "Usuario C: 10% de descuento"
 
-        }else if(usuarioUser == "Usuario D"){
-            descuento = 0.0f
-            totalPagar = (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat()) - (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat() * descuento!!)
-            mensaje =  "No tiene descuento"
-
+        } else {
+            descuento = 0F
+            mensaje = "No se le realiza descuento"
         }
 
-        textView1?.text = "Usuario: $nombreUser  ' ' $apellidoUser"
-        textView2?.text = if (usuarioUser == "Usuario D") "No se le realiza descuento" else "Usuario: $usuarioUser"
-        textView3?.text = mensaje
-        textView4?.text = "Total a pagar: $totalPagar"
+        totalPagar = (valorUniProduct!!.toFloat() * cantidadProduct!!.toFloat())
+        cantidadDescuento = (totalPagar!! * descuento!!)
+        precioReal = (totalPagar!! - cantidadDescuento!!)
+
+
+        textView1?.text = "Usuario: $nombreUser"+ " " + "$apellidoUser"
+        textView2?.text = mensaje
+        textView3?.text = "Producto: $nombreProduct"
+        textView4?.text = "Total a compra: $totalPagar"
         textView5?.text = "Descuento: $cantidadDescuento"
-        textView6?.text = "Precio real Compra: ($totalPagar + $descuento)"
+        textView6?.text = "Precio real Compra: ${precioReal}"
 
 
 
