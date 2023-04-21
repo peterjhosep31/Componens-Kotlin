@@ -175,7 +175,7 @@
 
             <Button
                 android:id="@+id/buttonSigiente"
-                android:layout_width="wrap_content"
+                android:layout_width="30mm"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
@@ -184,11 +184,10 @@
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="30mm"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
                 android:text="Volver"
                 android:id="@+id/volverAtras"
                 android:fontFamily="sans-serif-medium"

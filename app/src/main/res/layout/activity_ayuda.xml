@@ -37,7 +37,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:textSize="20sp"
             android:gravity="center"
             android:textColor="#000000"
-            android:background="#ffffff"
             android:padding="10dp"/>
 
         <TextView
@@ -89,7 +88,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/imagen" />
+                app:srcCompat="@drawable/imagen"
+                />
 
             <TextView
             android:layout_width="match_parent"
@@ -103,7 +103,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="30mm"
                 android:layout_height="wrap_content"
                 android:text="Volver"
                 android:layout_gravity="center"
