@@ -74,7 +74,7 @@ class Mensajes : AppCompatActivity() {
 
 
         if (usuarioUser == "Usuario A") {
-            descuento = 0.1F
+            descuento = 0.4F
             mensaje = "Usuario A: 40% de descuento"
 
         } else if (usuarioUser == "Usuario B") {
@@ -82,7 +82,7 @@ class Mensajes : AppCompatActivity() {
             mensaje = "Usuario B: 20% de descuento"
 
         } else if (usuarioUser == "Usuario C") {
-            descuento = 0.3F
+            descuento = 0.1F
             mensaje = "Usuario C: 10% de descuento"
 
         } else {
